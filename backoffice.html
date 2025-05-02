@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backoffice</title>
+  </head>
+  <body>
+    <h1>Gestione Prodotti</h1>
+
+    <form id="backoffice-form">
+      <input type="text" id="name" placeholder="Nome" />
+      <input type="text" id="description" placeholder="Descrizione" />
+      <input type="text" id="brand" placeholder="Brand" />
+      <input type="url" id="imageUrl" placeholder="URL Immagine" />
+      <input type="number" id="price" placeholder="Prezzo" />
+      <button type="submit">Salva Prodotto</button>
+      <button id="editBtn">Modifica prodotto</button>
+
+      <input type="text" id="productId" placeholder="ID prodotto" />
+    </form>
+    <button id="deleteBtn">Elimina prodotto</button>
+    <button id="resetBtn">FORM-RESET</button>
+
+    <script src="./backoffice.js"></script>
+  </body>
+</html>

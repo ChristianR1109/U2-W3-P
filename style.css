@@ -1,3 +1,11 @@
 body {
   background-color: palegreen;
+  box-sizing: border-box;
+}
+.editButton {
+  width: 33%;
+  background-color: pink;
+}
+.deleteButton {
+  width: 33%;
 }

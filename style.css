@@ -5,21 +5,28 @@ body {
 }
 .editButton {
   width: 33%;
-  background-color: pink;
+  background-color: white;
+  border: 1px solid black;
 }
 .deleteButton {
   width: 33%;
+  border: 1px solid black;
 }
 .detailButton {
   border: 1px solid black;
   width: 50%;
-  background-color: paleturquoise;
+  background: #ffffff;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 191, 1) 0%, rgba(255, 255, 15, 0.8) 100%);
 }
 .mh-70 {
   max-height: 70% !important;
 }
 .card {
   background: #ffffff;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(240, 129, 236, 1) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(250, 244, 62, 0.8) 100%);
   border: 1px solid black;
+}
+.price-bg {
+  background: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(163, 152, 152, 1) 0%, rgba(204, 180, 180, 0.8) 100%);
 }

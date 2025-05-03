@@ -57,7 +57,7 @@ const getProducts = () => {
         textDiv.appendChild(brand);
 
         const price = document.createElement("p");
-        price.classList.add("p");
+        price.classList.add("p", "price-bg", "fw-bold", "fs-4");
         price.innerText = "Price " + product.price + "€";
         textDiv.appendChild(price);
         // buttons modifica / elimina

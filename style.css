@@ -1,6 +1,7 @@
 body {
-  background-color: palegreen;
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .editButton {
   width: 33%;
@@ -8,4 +9,17 @@ body {
 }
 .deleteButton {
   width: 33%;
+}
+.detailButton {
+  border: 1px solid black;
+  width: 50%;
+  background-color: paleturquoise;
+}
+.mh-70 {
+  max-height: 70% !important;
+}
+.card {
+  background: #ffffff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(240, 129, 236, 1) 100%);
+  border: 1px solid black;
 }

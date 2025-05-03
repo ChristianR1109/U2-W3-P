@@ -25,8 +25,9 @@ const getProducts = () => {
     .then((products) => {
       products.forEach((product) => {
         const cardPos = document.getElementById("prod-container");
+        cardPos.classList.add("mb-5", "row", "g-3");
         const card = document.createElement("div");
-        card.classList.add("card", "col-lg-3", "col-md-4", "col-sm-6", "col-6", "g-3");
+        card.classList.add("card", "col-lg-3", "col-md-4", "col-sm-6", "col-6");
         //title
         const cardTitle = document.createElement("div");
         cardTitle.classList.add("card-title", "text-center");
@@ -38,14 +39,15 @@ const getProducts = () => {
         imgDiv.classList.add("card-img", "text-center");
         const img = document.createElement("img");
         img.src = product.imageUrl;
-        img.style.width = "100px";
+        img.classList.add("img-fluid", "object-fit-contain", "w-100");
         img.style.height = "200px";
+
         imgDiv.appendChild(img);
         //description & Brand & price
         const textDiv = document.createElement("div");
         textDiv.classList.add("text-center");
         const desc = document.createElement("p");
-        desc.classList.add("p");
+        desc.classList.add("p", "mb-0");
         desc.innerText = product.description;
         textDiv.appendChild(desc);
 
@@ -76,7 +78,12 @@ const getProducts = () => {
           window.location.href = `backoffice.html?productId=${product._id}`;
         };
         // button scopri di piu
+        const detailDiv = document.createElement("div");
+        detailDiv.classList.add("d-flex", "justify-content-center");
         const detailButton = document.createElement("button");
+        detailButton.innerText = "Scopri di più";
+        detailButton.classList.add("btn", "mb-2", "detailButton");
+        detailDiv.appendChild(detailButton);
 
         detailButton.textContent = "Scopri di più";
         detailButton.onclick = () => {
@@ -91,55 +98,11 @@ const getProducts = () => {
         card.appendChild(imgDiv);
         card.appendChild(textDiv);
         card.appendChild(buttonsDiv);
+        card.appendChild(detailDiv);
         cardPos.appendChild(card);
-
-        /* const card = document.createElement("div");
-        card.classList.add("card", "col-lg-2", "col-md-3", "col-sm-4", "col-6", "mw-100");
-        const cardContent = document.createElement("div");
-        cardContent.classList.add("card-body", "d-flex");
-
-        const h3 = document.createElement("h3");
-        h3.innerText = `${product.name}`;
-        h3.classList.add("h3");
-        cardContent.appendChild(h3);
-
-        const img = document.createElement("img");
-        img.src = product.imageUrl;
-        img.style.width = "100px";
-        img.style.height = "200px";
-        cardContent.appendChild(img);
-        const p = document.createElement("p");
-        p.innerText = `${product.description}`;
-        p.classList.add("p");
-        cardContent.appendChild(p);
-        const p2 = document.createElement("p");
-        p2.innerText = ` Brand: ${product.brand}`;
-        p2.classList.add("p");
-        cardContent.appendChild(p2);
-        const p3 = document.createElement("p");
-        p3.innerText = `Prezzo: € ${product.price}`;
-        p3.classList.add("p");
-        cardContent.appendChild(p3);
-        const editButton = document.createElement("button");
-        editButton.textContent = "Modifica ✏️";
-        editButton.onclick = () => {
-          window.location.href = `backoffice.html?productId=${product._id}`;
-        };
-        cardContent.appendChild(editButton);
-        const detailButton = document.createElement("button");
-        detailButton.textContent = "Scopri di più";
-        detailButton.onclick = () => {
-          window.location.href = `details.html?productId=${product._id}`;
-        };
-        cardContent.appendChild(detailButton);
-
-        card.appendChild(cardContent);
-        container.appendChild(card); */
       });
     })
 
-    .catch((error) => {
-      console.log(error);
-    });
+    .catch((error) => console.log(error));
 };
 getProducts();
